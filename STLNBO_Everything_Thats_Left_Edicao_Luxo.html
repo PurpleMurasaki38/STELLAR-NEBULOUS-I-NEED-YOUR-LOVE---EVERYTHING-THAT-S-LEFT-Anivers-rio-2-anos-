@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STLNBO — EVERYTHING THAT'S LEFT · Edição Luxo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #0a0b0f;
+    --bg2: #111319;
+    --bg3: #181b24;
+    --gold: #d4af37;
+    --gold-soft: #e8d48b;
+    --emerald: #2ecc71;
+    --emerald-dark: #1a9c4f;
+    --red: #c0392b;
+    --red-soft: #e74c3c;
+    --blue: #3498db;
+    --purple: #9b59b6;
+    --text: #e8e6e3;
+    --text-muted: #a0a0a8;
+    --border: rgba(212, 175, 55, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(180deg, #0d0e14 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--emerald), var(--gold), transparent);
+  }
+
+  .kicker {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    color: var(--gold-soft);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    color: var(--text-muted);
+    font-style: italic;
+    max-width: 720px;
+    margin: 0 auto 25px;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .meta span {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 11, 15, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: all 0.25s;
+  }
+
+  nav a:hover {
+    color: var(--gold);
+    border-color: var(--border);
+    background: var(--bg3);
+  }
+
+  /* ===== MAIN ===== */
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 22px 100px;
+  }
+
+  /* ===== INTRO BOX ===== */
+  .intro-box {
+    background: linear-gradient(145deg, var(--bg2), var(--bg3));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 32px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .intro-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 40px; right: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .intro-box p {
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .intro-box strong { color: var(--gold-soft); }
+
+  /* ===== TEMPORADA ===== */
+  .season {
+    margin-bottom: 70px;
+  }
+
+  .season-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .season-header .epno {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--emerald);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .season-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    color: var(--gold-soft);
+    margin-bottom: 12px;
+  }
+
+  .season-header p {
+    font-style: italic;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ===== EPISÓDIO ===== */
+  .episode {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 36px;
+    position: relative;
+  }
+
+  .episode::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 20px; bottom: 20px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--gold), var(--emerald));
+    border-radius: 0 3px 3px 0;
+  }
+
+  .episode h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+  }
+
+  .scene {
+    margin-bottom: 28px;
+  }
+
+  .scene-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .scene-title::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--emerald);
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  .scene p {
+    margin-bottom: 12px;
+    color: #c8c6c2;
+  }
+
+  /* ===== DIÁLOGOS ===== */
+  .dialogue {
+    margin: 14px 0;
+    padding-left: 18px;
+    border-left: 2px solid rgba(212,175,55,0.3);
+  }
+
+  .dialogue .speaker {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 3px;
+    letter-spacing: 0.5px;
+  }
+
+  .dialogue.green .speaker { color: var(--emerald); }
+  .dialogue.red .speaker { color: var(--red-soft); }
+  .dialogue.blue .speaker { color: var(--blue); }
+  .dialogue.purple .speaker { color: var(--purple); }
+  .dialogue.gold .speaker { color: var(--gold-soft); }
+
+  .dialogue p, .dialogue {
+    color: #ddd;
+  }
+
+  /* ===== FIM DE EP ===== */
+  .ep-end {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* ===== SPECIAL CHAPTER ===== */
+  .special {
+    background: linear-gradient(160deg, #12141c 0%, #0e1018 50%, #14101a 100%);
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: 18px;
+    padding: 50px 36px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .special::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--emerald), var(--purple), var(--gold));
+  }
+
+  .special-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .special-header .epno {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .special-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    color: var(--gold-soft);
+    margin-bottom: 16px;
+  }
+
+  .special-header p {
+    font-style: italic;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .couple-block {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 40px;
+  }
+
+  .couple-block h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .couple-block h3::before {
+    content: '✦';
+    color: var(--emerald);
+    font-size: 16px;
+  }
+
+  .couple-block .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  /* ===== EPILOGUE ===== */
+  .ending {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 60px;
+  }
+
+  .ending .kicker {
+    margin-bottom: 20px;
+  }
+
+  .ending blockquote {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: var(--gold-soft);
+    line-height: 1.5;
+    margin: 25px auto;
+    max-width: 520px;
+  }
+
+  .ending .muted {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-top: 18px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  footer strong { color: var(--gold); }
+
+  /* ===== CANON NOTES ===== */
+  .canon {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+
+  .canon h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  .canon ol {
+    padding-left: 22px;
+    color: var(--text-muted);
+  }
+
+  .canon li {
+    margin-bottom: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .episode, .couple-block, .special { padding: 24px 18px; }
+    h1 { font-size: 26px; }
+    .season-header h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">STLNBO · LORDVERSE</div>
+  <h1>EVERYTHING THAT'S LEFT</h1>
+  <p class="subtitle">Especial de aniversário — roteiro expandido e corrigido<br>12 episódios · 2 temporadas · Capítulo Especial dos Casais</p>
+  <div class="meta">
+    <span>Aventura psicológica</span>
+    <span>Fantasia cósmica</span>
+    <span>Ação multiversal</span>
+    <span>Drama existencial</span>
+    <span>Comédia filosófica</span>
+    <span>Horror digital</span>
+    <span>Amizade & Amor</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#intro">Introdução</a>
+  <a href="#t1">Temporada 1</a>
+  <a href="#t2">Temporada 2</a>
+  <a href="#casais">Capítulo Especial</a>
+  <a href="#epilogo">Epílogo</a>
+  <a href="#canon">Cânone</a>
+</nav>
+
+<main>
+
+<!-- ==================== INTRODUÇÃO ==================== -->
+<section id="intro" class="intro-box">
+  <p><strong>Vou reconstruir a saga inteira</strong>, não apenas acrescentar episódios ao texto anterior. Serão 12 episódios: 6 em cada temporada, com roteiro mais cinematográfico, diálogos extensos, confrontos coreografados, reencontros emocionais e desenvolvimento de todos os núcleos.</p>
+
+  <p>Vou usar o arquivo <strong>NEXUS — O Limite Quebrado e o Paradoxo do Reset</strong> como referência de identidade narrativa: abertura dramática, cenas encadeadas, diálogos identificados por personagem, tensão crescente, lutas com ações e reações, consequências emocionais e encerramentos marcantes. Mas a nova saga terá identidade própria — sem importar os massacres, resets ou mortes daquele AU.</p>
+
+  <p>Também vou preservar as regras corrigidas do seu universo:</p>
+  <p>• Ciel é o verdadeiro nome de Hydra!Frost! · Alpha!Apogeu! é outra entidade, completamente distinta.<br>
+  • Nenhum Frost principal morre.<br>
+  • A Equipe Caótica terá um reencontro emocional completo, não uma aparição rápida.<br>
+  • Mr G. Frost, Ophanim!Frost!, Kaos, Lucario, Lycanroc, Pichu e Dark Cinderace terão participação narrativa.<br>
+  • Os personagens de STL terão momentos de amizade, brincadeiras e convivência, agora livres das antigas normas que limitavam suas escolhas.<br>
+  • Acedia continuará sendo uma filosofia positiva de liberdade, não uma maldição ou antagonista.<br>
+  • Fear Proxy e iNSaNiTY conservarão suas referências de terror, sem serem reduzidos a cópias de suas inspirações.</p>
+
+  <p style="margin-top:22px; text-align:center; color:var(--gold); font-family:'Cinzel',serif; letter-spacing:1px;">
+    STLNBO — EVERYTHING THAT'S LEFT<br>
+    <span style="font-size:14px; color:var(--text-muted);">Saga I: I NEED YOUR LOVE · Saga II: EVERYTHING THAT'S LEFT</span>
+  </p>
+</section>
+
+<!-- ==================== TEMPORADA 1 ==================== -->
+<section id="t1" class="season">
+  <div class="season-header">
+    <div class="epno">Temporada 1</div>
+    <h2>I NEED YOUR LOVE</h2>
+    <p>O amor não é uma corrente. É a possibilidade de continuar escolhendo alguém, mesmo quando já não somos obrigados a permanecer ao lado dessa pessoa.</p>
+  </div>
+
+  <!-- EP 1 -->
+  <article class="episode">
+    <h3>EPISÓDIO 1 — O DÉCIMO SEXTO SONHO</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O universo que estava esperando</div>
+      <p>O silêncio atravessava os Lordversos.</p>
+      <p>Não havia explosões, guerras ou catástrofes. As Árvores Universais continuavam produzindo infinitas possibilidades, mas algumas de suas folhas começaram a apresentar algo diferente: memórias que não pertenciam àquela linha temporal.</p>
+      <p>Uma folha mostrava um Frost lutando contra si mesmo. Outra mostrava uma versão que jamais havia existido. Uma terceira apresentava um personagem olhando diretamente para o próprio criador.</p>
+      <p>No centro de uma dessas árvores, uma dimensão começou a nascer.</p>
+      <p><strong>MUNDO PSIQUIATRA ETERNO.</strong></p>
+      <p>Não era um hospital, uma prisão ou uma punição. Era um espaço de compreensão, onde pensamentos adquiriam forma e cada personagem podia observar sua própria história sem ser obrigado a obedecer às interpretações que haviam sido impostas a ela.</p>
+      <p>True!Leafy! observava a dimensão recém-formada.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Então era isso... Não precisávamos de mais uma realidade. Precisávamos de um lugar onde pudéssemos entender as realidades que já existem.</div>
+      <p>Uma pequena esfera de energia esmeralda surgiu sobre sua mão.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Mundo Psiquiatra Eterno.</div>
+      <p>O espaço inteiro respondeu.</p>
+      <div class="dialogue"><span class="speaker">VOZ DO MUNDO</span>— Quem deseja entrar?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Todos. Mas ninguém será obrigado.</div>
+      <p>Uma porta se abriu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — As duas correntes</div>
+      <p>Em outro lugar, True!Frost! estava suspenso em um espaço branco.</p>
+      <p>Não havia chão. Não havia céu. Apenas correntes atravessando sua sombra e duas inscrições flutuando diante dele.</p>
+      <p><strong>MATAR SEM PIEDADE PARA NÃO SER MANIPULADO.</strong><br>
+      <strong>MORRER PARA MANTER O EQUILÍBRIO.</strong></p>
+      <p>Frost tentou movimentar os braços. As correntes apertaram.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— De novo isso...</div>
+      <p>Uma voz surgiu de dentro do próprio espaço.</p>
+      <div class="dialogue"><span class="speaker">VOZ</span>— Você precisa escolher.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Entre essas duas coisas?</div>
+      <div class="dialogue"><span class="speaker">VOZ</span>— Sim.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então a escolha está errada.</div>
+      <p>As correntes vibraram.</p>
+      <div class="dialogue"><span class="speaker">VOZ</span>— Se não matar, será manipulado. Se não morrer, será responsável pelo desequilíbrio.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você está apresentando duas possibilidades como se fossem a totalidade da existência.</div>
+      <p>Ele olhou para as inscrições.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu não sou obrigado a virar um assassino para preservar minha vontade. E não sou obrigado a morrer para justificar uma história que não representa quem eu sou.</div>
+      <p>Uma terceira inscrição começou a aparecer, mas foi imediatamente apagada.</p>
+      <p>Frost ergueu a cabeça.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ah. Então você também tem medo de uma terceira opção.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — O primeiro chamado</div>
+      <p>True!Leafy! atravessou a dimensão acompanhado por Hollow!Frost!, Moon!Frost!, B!Frost! e outros Frosts.</p>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Esse lugar é enorme. Você criou tudo isso sozinho?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não exatamente. Eu encontrei a possibilidade. O resto nasceu da necessidade de cada um.</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Interessante. Consigo sentir energia negativa atravessando as paredes. Mas ela não está me controlando.</div>
+      <div class="dialogue"><span class="speaker">B!FROST!</span>— Talvez porque aqui ninguém esteja tentando transformar nossa existência em uma função.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Exatamente.</div>
+      <p>Leafy levantou as mãos.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Eu não vou reescrever vocês. Não vou decidir quem vocês deveriam ser. Quero que cada um encontre aquilo que já era antes de acreditar que precisava representar alguma coisa.</div>
+      <p>O chão se transformou em uma sequência de portas.</p>
+      <p>Cada uma carregava um nome.</p>
+      <p>True!Frost! estava atrás da última.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A décima sexta porta</div>
+      <p>Leafy chegou até a porta e encostou a mão nela.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Frost? Consegue me ouvir?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Leafy?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Sou eu.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Não entra.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Por quê?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Porque essas correntes estão tentando me convencer de que eu só posso existir de duas maneiras.</div>
+      <p>Leafy fechou os olhos.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— E desde quando uma história tem autoridade para decidir todas as maneiras pelas quais você pode existir?</div>
+      <p>As correntes tremeram.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Desde quando eu comecei a acreditar nela.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Então vamos começar por aí.</div>
+      <p>Uma luz esmeralda atravessou a porta.</p>
+      <p>Pela primeira vez, as correntes ficaram imóveis.</p>
+      <p>Ao longe, uma figura observava o fenômeno.</p>
+      <p>Ciel.</p>
+      <p>O verdadeiro nome de Hydra!Frost!.</p>
+      <p>Ele não interferiu. Apenas observou a dimensão e sorriu discretamente.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Interessante... Então Frost finalmente vai descobrir o que acontece quando deixa de lutar contra si mesmo.</div>
+      <p>A câmera se afasta.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 1</div>
+  </article>
+
+  <!-- EP 2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 2 — O MUNDO PSIQUIATRA ETERNO</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — As salas da consciência</div>
+      <p>O Mundo Psiquiatra Eterno abriu suas portas para os Frosts.</p>
+      <p>Cada um encontrou um ambiente diferente.</p>
+      <p>Alguns encontraram cenários de suas histórias originais. Outros viram versões antigas de si mesmos. Alguns encontraram memórias que acreditavam ter perdido.</p>
+      <p>True!Leafy! caminhava entre as salas.</p>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Você acha que todos vão conseguir?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não sei.</div>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Isso não parece muito tranquilizador.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Eu poderia mentir e dizer que tenho certeza. Mas a liberdade começa quando ninguém precisa fingir que sabe tudo.</div>
+      <p>Longsmoi ficou em silêncio por alguns segundos.</p>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Então eu não preciso competir com os outros para provar que existo?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Você nunca precisou.</div>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Engraçado. Passei tanto tempo tentando ocupar um lugar que nem percebi que já tinha um.</div>
+      <p>Leafy sorriu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — A descoberta de Hollow!Frost!</div>
+      <p>Hollow!Frost! estava em uma sala completamente escura.</p>
+      <p>Milhares de pequenos universos apareciam ao redor dele, cada um emitindo energia negativa.</p>
+      <p>Ele estendeu a mão.</p>
+      <p>Uma esfera negra surgiu em sua palma.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Durante tanto tempo, pensei que minha existência dependesse de absorver tudo isso.</div>
+      <p>A energia começou a aumentar.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Metaversos, Árvores Universais, Lordversos... Eu podia sentir tudo, mas nunca conseguia compreender por que precisava esconder minha capacidade.</div>
+      <p>Uma segunda voz surgiu.</p>
+      <div class="dialogue"><span class="speaker">VOZ</span>— Talvez porque você acreditasse que revelar sua força significaria perder o controle.</div>
+      <p>Hollow olhou para o próprio reflexo.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Não. Eu tinha medo de descobrir que não existia limite algum.</div>
+      <p>Ele fechou a mão.</p>
+      <p>A escuridão não desapareceu. Apenas deixou de ser uma ameaça.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Agora eu sei que posso escolher o que fazer com ela.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — Moon!Frost! e a história que não era sua</div>
+      <p>Moon!Frost! caminhava por um jardim lunar.</p>
+      <p>Ao redor, cenas de relacionamentos e encontros apareciam como projeções.</p>
+      <p>Ele observou uma delas e desviou o olhar.</p>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Então foi isso que fizeram com minha história...</div>
+      <p>Uma figura apareceu ao lado dele.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Você não precisa aceitar um vínculo só porque ele foi escrito em algum lugar.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— E se eu tiver passado tanto tempo acreditando que aquilo era o que eu queria?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Então você pode descobrir o que realmente quer agora.</div>
+      <p>Moon olhou para a lua.</p>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Eu quero escolher. Mesmo que demore.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Isso já é um começo.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A primeira luta</div>
+      <p>Uma anomalia surgiu no centro do Mundo Psiquiatra Eterno.</p>
+      <p>Era uma criatura formada por fragmentos de identidades rejeitadas. Ela tentava prender os Frosts em suas antigas interpretações.</p>
+      <div class="dialogue"><span class="speaker">ANOMALIA</span>— Vocês não podem abandonar seus papéis!</div>
+      <p>Hollow avançou.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— E quem disse que você decide?</div>
+      <p>A criatura disparou dezenas de lâminas conceituais.</p>
+      <p>Hollow ergueu uma barreira. Moon criou uma tempestade de gelo lunar, enquanto B!Frost! atravessou a defesa da anomalia com um golpe concentrado.</p>
+      <div class="dialogue"><span class="speaker">B!FROST!</span>— Leafy! Alguma ideia?!</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não destruam a criatura! Descubram o que a mantém aqui!</div>
+      <p>Moon observou os fragmentos.</p>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Ela é formada por pensamentos que ninguém quis compreender!</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Então vamos parar de tratá-la como inimiga!</div>
+      <p>Os três sincronizaram seus poderes.</p>
+      <p>A criatura se desfez em pequenas partículas luminosas.</p>
+      <div class="dialogue"><span class="speaker">ANOMALIA</span>— Eu... também posso escolher?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Pode.</div>
+      <p>A anomalia desapareceu pacificamente.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — A filosofia da acedia</div>
+      <p>No centro da dimensão, os Frosts se reuniram.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Existe uma maneira de compreender tudo isso. A acedia, aqui, não será uma doença ou uma maldição. Será uma filosofia de desapego das obrigações artificiais.</div>
+      <div class="dialogue"><span class="speaker">B!FROST!</span>— Então podemos simplesmente parar de tentar provar que somos superiores?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Se vocês quiserem.</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— E podemos continuar lutando?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Claro.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Podemos rir?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Por favor.</div>
+      <p>Longsmoi ergueu a mão.</p>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Podemos não fazer absolutamente nada por alguns minutos?</div>
+      <p>Leafy olhou para todos.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Essa talvez seja a primeira atividade oficial do Mundo Psiquiatra Eterno.</div>
+      <p>Todos começaram a rir.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 2</div>
+  </article>
+
+  <!-- EP 3 -->
+  <article class="episode">
+    <h3>EPISÓDIO 3 — EU SOU, LOGO ESCOLHO</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — A consciência sem fronteiras</div>
+      <p>Os True se reuniram em uma dimensão sem matéria.</p>
+      <p>Não havia olhos, ouvidos ou qualquer estrutura física necessária para perceber o ambiente. A consciência existia sem depender de um corpo específico.</p>
+      <p>True!Frost! observava o espaço.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então é isso que acontece quando deixamos de limitar nossa percepção aos sentidos?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não é a ausência de um corpo que define nossa liberdade. É perceber que nossa existência não depende exclusivamente dele.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Como um sonho?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Um sonho que sabe que está sonhando.</div>
+      <p>As consciências se conectaram ao universo e ao próprio karma, sem perder suas individualidades.</p>
+      <p>As capacidades Outerverseal e Omnilock permaneciam. Porém, a compreensão da existência ultrapassava as categorias ontológicas que antes pareciam definitivas.</p>
+      <p>Uma voz surgiu no espaço.</p>
+      <div class="dialogue"><span class="speaker">VOZ</span>— Eu deleto você.</div>
+      <p>Frost virou a cabeça.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Quem é esse eu?</div>
+      <p>A voz repetiu.</p>
+      <div class="dialogue"><span class="speaker">VOZ</span>— Eu posso apagar sua existência.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— O que significa apagar? Você está tentando introduzir uma definição na minha consciência e convencer-me de que ela é absoluta.</div>
+      <p>Ele sorriu.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu sou quem acredito ser? Quem realmente sou? Sou eu? Eu sou? Eu sou o Eu Sou?</div>
+      <p>A voz desapareceu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — Mr G. Frost</div>
+      <p>Em uma região distante, uma porta antiga se abriu.</p>
+      <p>Um Glaceon surgiu.</p>
+      <p>Era Mr G. Frost.</p>
+      <p>Ele observou o Mundo Psiquiatra Eterno e percebeu uma presença familiar.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Então esse lugar realmente existe...</div>
+      <p>True!Frost! se aproximou.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Mr G.?</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Olha só. Você cresceu.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você também não mudou tanto.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Eu sou um protótipo de 2022. Não espere milagres.</div>
+      <p>Os dois riram.</p>
+      <p>Mr G. olhou para as portas.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Ouvi dizer que você está libertando as variantes.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Estamos tentando.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Então não esqueça das primeiras histórias. Nem todo mundo começou sabendo o que era.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu não vou esquecer.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — Ophanim!Frost!</div>
+      <p>Uma formação de luz geométrica apareceu no céu.</p>
+      <p>Anéis luminosos, olhos e estruturas celestiais giravam em perfeita sincronia.</p>
+      <p>Ophanim!Frost! desceu lentamente.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— O Mundo Psiquiatra Eterno está interferindo em estruturas que muitos consideravam imutáveis.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Você veio fiscalizar?</div>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Não. Vim descobrir se ainda existe alguma coisa que não compreendi.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então está no lugar certo.</div>
+      <p>Ophanim observou os Frosts reunidos.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Vocês parecem estranhamente felizes para entidades que acabaram de questionar a própria ontologia.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— É porque ninguém está cobrando relatório.</div>
+      <p>Ophanim ficou em silêncio.</p>
+      <p>Depois, soltou uma pequena risada.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A batalha dos limites</div>
+      <p>Uma ruptura dimensional apareceu.</p>
+      <p>De dentro dela, uma estrutura gigantesca começou a atacar as Árvores Universais.</p>
+      <p>Mr G. avançou primeiro.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Finalmente alguma coisa para fazer!</div>
+      <p>Ele disparou uma onda de energia congelante. A estrutura respondeu com dezenas de braços dimensionais.</p>
+      <p>Ophanim abriu seus anéis.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Geometria celestial: rotação absoluta!</div>
+      <p>Os anéis interceptaram os braços, mas a criatura começou a adaptar sua forma.</p>
+      <p>True!Frost! surgiu por trás dela.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ela está tentando impor uma única estrutura a todas as possibilidades!</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Então vamos mostrar que possibilidades não são tão obedientes!</div>
+      <p>Os três atacaram em conjunto.</p>
+      <p>Ophanim restringiu os movimentos da criatura, Mr G. congelou suas extensões e True!Frost! atingiu o núcleo conceitual.</p>
+      <p>A estrutura explodiu em fragmentos.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — Uma promessa</div>
+      <p>Depois da batalha, Mr G. sentou-se ao lado de True!Frost!.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Você sabe que não precisa carregar todas as versões de si mesmo, certo?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu sei.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Ótimo. Porque eu não tenho intenção de virar seu problema administrativo.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você seria um péssimo funcionário.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Eu seria o melhor funcionário. Só não apareceria.</div>
+      <p>Os dois riram.</p>
+      <p>Ao fundo, Ophanim observava o céu.</p>
+      <p>Uma silhueta vermelha atravessava uma região distante.</p>
+      <p>Ciel estava se movimentando.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 3</div>
+  </article>
+
+  <!-- EP 4 -->
+  <article class="episode">
+    <h3>EPISÓDIO 4 — A EQUIPE CAÓTICA</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O sinal perdido</div>
+      <p>Uma frequência antiga começou a tocar na Omega Timeline.</p>
+      <p>Era um sinal que Kaos conhecia.</p>
+      <p>Ele estava sentado diante de uma parede escura, observando uma pequena gravação holográfica.</p>
+      <p>Na imagem, Pichu corria em círculos enquanto Dark Cinderace tentava impedir que uma explosão atingisse o teto. Lycanroc aparecia ao fundo, discutindo com Luke, o Lucario.</p>
+      <p>Kaos desligou a gravação.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Vocês ainda estão por aí...</div>
+      <p>Luke aproximou-se.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE (LUCARIO)</span>— Você assiste a isso todas as noites.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Não são todas.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Ontem foram três vezes.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Você está contando?</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Alguém precisa fazer isso.</div>
+      <p>Kaos ficou em silêncio.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu não sei se eles ainda vão querer me ver.</div>
+      <p>Luke sentou-se ao seu lado.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Então dê a eles a oportunidade de decidir.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — O portal</div>
+      <p>Uma abertura apareceu no corredor.</p>
+      <p>Do outro lado, Pichu estava parado.</p>
+      <p>Ele olhou para Kaos.</p>
+      <p>Por alguns segundos, nenhum dos dois se mexeu.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— ...Kaos?</div>
+      <p>Kaos levantou imediatamente.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Pichu?</div>
+      <p>Pichu correu.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— SEU IDIOTA!</div>
+      <p>Ele saltou contra Kaos e o abraçou.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— ONDE VOCÊ ESTAVA?!</div>
+      <p>Kaos ficou imóvel, tentando compreender o que estava acontecendo.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu...</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— NÃO! NÃO COMEÇA COM DESCULPA! EU QUERO SABER ONDE VOCÊ ESTAVA!</div>
+      <p>Kaos abaixou a cabeça.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu achei que seria melhor ficar longe.</div>
+      <p>Pichu começou a chorar.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Melhor para quem?!</div>
+      <p>Kaos não respondeu.</p>
+      <p>Pichu apertou o abraço.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— A gente procurou você.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — Os outros retornam</div>
+      <p>Lycanroc atravessou o portal.</p>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Então é aqui que você resolveu se esconder.</div>
+      <p>Kaos olhou para ele.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Você continua mal-humorado.</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— E você continua fazendo escolhas idiotas.</div>
+      <p>Dark Cinderace apareceu logo depois.</p>
+      <p>Ele cruzou os braços.</p>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Eu preparei três discursos diferentes para esse reencontro.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— E qual vai usar?</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Nenhum. Você não merece ouvir nenhum deles ainda.</div>
+      <p>Ele se aproximou e deu um soco leve no ombro de Kaos.</p>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Mas senti sua falta, desgraçado.</div>
+      <p>Luke se aproximou do grupo.</p>
+      <p>Pichu correu até ele.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— LUKE!</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Oi, pequeno.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Você demorou!</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Eu estava tentando encontrar o caminho.</div>
+      <p>Lycanroc olhou para Luke.</p>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Ele está mentindo. Estava perdido.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Não precisava contar.</div>
+      <p>Todos começaram a rir.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — Kaos e Luke</div>
+      <p>Mais tarde, Kaos e Luke ficaram sozinhos.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Você realmente acreditou que eu voltaria?</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Sim.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Por quê?</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Porque você nunca deixou de ser parte da equipe.</div>
+      <p>Kaos olhou para as próprias mãos.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu tinha medo de perder o controle outra vez.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Você não precisa enfrentar isso sozinho.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— E se acontecer de novo?</div>
+      <p>Luke segurou sua mão.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Então vamos lidar com isso juntos.</div>
+      <p>Kaos respirou fundo.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu senti sua falta.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Eu também.</div>
+      <p>Eles se abraçaram.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — A batalha da reunião</div>
+      <p>O reencontro foi interrompido por uma criatura infectada pelo Grudge Virus.</p>
+      <p>Ela surgiu na entrada da dimensão, destruindo o portal por onde a equipe havia chegado.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Ah, não! Eu acabei de chegar!</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Parece que alguém quer estragar nossa reunião.</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Então vamos ensinar educação.</div>
+      <p>Kaos assumiu a liderança.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Luke, proteção central! Lycanroc, flanco esquerdo! Dark Cinderace, ataque de contenção! Pichu, comigo!</div>
+      <p>A criatura disparou uma onda de energia.</p>
+      <p>Luke criou uma barreira psíquica. Lycanroc avançou por baixo dela e atingiu as pernas do inimigo. Dark Cinderace disparou uma sequência de ataques de fogo, enquanto Pichu carregava energia elétrica.</p>
+      <p>Kaos absorveu parte da energia do Grudge Virus, mas começou a perder o controle.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— KAOS! OLHA PARA MIM!</div>
+      <p>Kaos tremeu.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— VOCÊ NÃO ESTÁ SOZINHO!</div>
+      <p>Luke segurou seu braço.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Volta. Estamos aqui.</div>
+      <p>Kaos respirou fundo e retomou o controle.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Equipe Caótica... ataque conjunto!</div>
+      <p>Todos avançaram.</p>
+      <p>A criatura foi derrotada.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 6 — De volta à família</div>
+      <p>A equipe ficou reunida no chão, exausta.</p>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Então... alguém trouxe comida?</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Você pensa em comida depois de uma luta dessas?</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— EU QUERO COMIDA!</div>
+      <p>Kaos começou a rir.</p>
+      <p>Luke olhou para ele.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— O que foi?</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Nada. Só estava pensando que senti falta disso.</div>
+      <p>A câmera se afasta enquanto a Equipe Caótica permanece reunida.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 4</div>
+  </article>
+
+  <!-- EP 5 -->
+  <article class="episode">
+    <h3>EPISÓDIO 5 — LIVRES DAS NORMAS</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — A reunião de STL</div>
+      <p>No universo STL, os personagens estavam reunidos em uma grande praça.</p>
+      <p>Lua.STL, Golden.STL, Pack, Zip.STL, Angelus.STL e outros membros da Glitch Code conversavam livremente.</p>
+      <p>Não havia uma ordem obrigatória de comportamento. Nenhuma regra determinava quem podia falar, brincar, discordar ou escolher seu próprio caminho.</p>
+      <p>Lua observava o grupo.</p>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Então... podemos realmente fazer o que quisermos?</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Desde que não destruamos a realidade por acidente.</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Isso parece uma regra.</div>
+      <div class="dialogue"><span class="speaker">ANGELUS.STL</span>— É uma recomendação de sobrevivência.</div>
+      <div class="dialogue"><span class="speaker">PACK</span>— Eu voto em destruir alguma coisa pequena.</div>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Você não vai destruir nada.</div>
+      <div class="dialogue"><span class="speaker">PACK</span>— Então vou destruir sua paciência.</div>
+      <p>Golden começou a rir.</p>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Finalmente estamos vivendo.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — A liberdade de Golden</div>
+      <p>Golden caminhou até Lua.</p>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Você percebeu que não precisamos mais representar nossas funções o tempo inteiro?</div>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Percebi.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Então o que você quer fazer?</div>
+      <p>Lua pensou.</p>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Não sei.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Ótimo.</div>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Ótimo?</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Sim. Pela primeira vez, você pode não saber sem que isso seja um problema.</div>
+      <p>Lua sorriu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — A chegada de Mr G. e Ophanim!</div>
+      <p>Mr G. Frost e Ophanim!Frost! atravessaram um portal.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Então esse é o famoso universo STL?</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Depende. Você veio pagar alguma dívida?</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Eu nem sei o que devo.</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Excelente. Já está devendo.</div>
+      <p>Ophanim observou a praça.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— A liberdade de vocês produziu uma organização curiosamente espontânea.</div>
+      <div class="dialogue"><span class="speaker">PACK</span>— Tradução: ninguém sabe o que está fazendo.</div>
+      <div class="dialogue"><span class="speaker">ANGELUS.STL</span>— Isso não é exatamente verdade.</div>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— É um pouco verdade.</div>
+      <p>Todos riram.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — O jogo sem regras impostas</div>
+      <p>A praça se transformou em uma arena de brincadeiras e desafios.</p>
+      <p>Golden desafiou Lua para uma corrida dimensional. Zip tentou trapacear usando atalhos digitais. Pack começou uma guerra de travesseiros que rapidamente envolveu metade da Glitch Code.</p>
+      <p>Mr G. foi desafiado para uma luta amistosa por Angelus.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Você tem certeza?</div>
+      <div class="dialogue"><span class="speaker">ANGELUS.STL</span>— Absoluta.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Então venha.</div>
+      <p>Os dois trocaram golpes em velocidade crescente. Angelus tentou um ataque pelo flanco, mas Mr G. girou e bloqueou com uma camada de gelo.</p>
+      <div class="dialogue"><span class="speaker">ANGELUS.STL</span>— Nada mal.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Você também.</div>
+      <p>Ophanim abriu seus anéis e criou obstáculos geométricos.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Vamos testar suas capacidades de adaptação.</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Isso parece uma desculpa para transformar uma brincadeira em prova.</div>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Talvez.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — Uma interrupção distante</div>
+      <p>Uma mensagem vermelha apareceu no céu.</p>
+      <p>Era um registro de energia do Grudge Virus.</p>
+      <p>Lua observou os dados.</p>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Isso não é uma anomalia comum.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— De onde vem?</div>
+      <p>Lua ampliou o mapa.</p>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Uma região próxima à Omega Timeline.</div>
+      <p>Mr G. ficou sério.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Ciel.</div>
+      <p>Ophanim observou o registro.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Ele está reunindo energia.</div>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Então precisamos descobrir o que está planejando.</div>
+      <p>A câmera mostra uma silhueta vermelha diante de uma grande quantidade de portais.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 5</div>
+  </article>
+
+  <!-- EP 6 -->
+  <article class="episode">
+    <h3>EPISÓDIO 6 — O RIVAL QUE ESCOLHEU LUTAR</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — A preparação de Ciel</div>
+      <p>Ciel estava em uma dimensão isolada.</p>
+      <p>O Grudge Virus circulava por seu corpo, mas não era a única fonte de sua força.</p>
+      <p>Ao redor dele estavam registros de batalhas antigas, habilidades lendárias e estratégias de diferentes adversários.</p>
+      <p>Uma projeção surgiu.</p>
+      <div class="dialogue"><span class="speaker">PROJEÇÃO</span>— Você pode vencer utilizando a infecção para sobrecarregar seu oponente.</div>
+      <p>Ciel olhou para ela.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não.</div>
+      <div class="dialogue"><span class="speaker">PROJEÇÃO</span>— A vitória seria mais rápida.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu não quero uma vitória emprestada.</div>
+      <p>Ele fechou a mão.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Quero vencer Frost porque sou capaz. Não porque uma infecção decidiu lutar no meu lugar.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — O encontro</div>
+      <p>True!Frost! atravessou um portal e encontrou Ciel.</p>
+      <p>Os dois ficaram frente a frente.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Faz tempo.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você parece diferente.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Estou melhor.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Isso é irritante.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você continua simpático.</div>
+      <p>Ciel sorriu.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Vim propor uma luta.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Agora?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não. Ainda não.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então por que veio?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Para avisar que vou vencer você.</div>
+      <p>Frost começou a rir.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Pelo menos continua confiante.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — A primeira batalha</div>
+      <p>Ciel atacou inesperadamente.</p>
+      <p>Um golpe vermelho atravessou o espaço e atingiu Frost, que foi lançado contra uma estrutura dimensional.</p>
+      <p>Frost se recuperou e desviou de uma sequência de ataques.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você veio conversar ou lutar?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— As duas coisas!</div>
+      <p>Ciel abriu múltiplos portais e lançou ataques em ângulos diferentes.</p>
+      <p>Frost criou uma barreira conceitual, mas Ciel atravessou a defesa com uma sequência de golpes físicos.</p>
+      <p>Frost foi lançado ao chão.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você está ficando lento!</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Estou tentando ser educado!</div>
+      <p>Frost desapareceu e reapareceu atrás de Ciel, atingindo-o com um golpe concentrado.</p>
+      <p>Ciel bloqueou parcialmente, mas foi lançado para longe.</p>
+      <p>Os dois sorriram.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A interrupção do Grudge</div>
+      <p>A infecção reagiu à intensidade da batalha.</p>
+      <p>Uma onda vermelha saiu do corpo de Ciel e começou a consumir a dimensão.</p>
+      <p>Frost recuou.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ciel! Está perdendo o controle!</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu sei!</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então pare!</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— NÃO PRECISO QUE VOCÊ DECIDA ISSO POR MIM!</div>
+      <p>A energia explodiu.</p>
+      <p>Frost avançou, mas não tentou matar ou apagar o rival. Criou uma contenção ao redor da infecção.</p>
+      <p>Ciel finalmente conseguiu estabilizá-la.</p>
+      <p>Os dois caíram de joelhos.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu não pedi ajuda.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu sei.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Então por que ajudou?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Porque não preciso que você seja meu amigo para não querer ver você perder a própria identidade.</div>
+      <p>Ciel desviou o olhar.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — O fim da primeira temporada</div>
+      <p>Ciel abriu um portal.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Na próxima vez, não vou interromper a luta.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Espero que não.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— E não vou facilitar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Nem eu.</div>
+      <p>Ciel desapareceu.</p>
+      <p>Frost voltou ao Mundo Psiquiatra Eterno, onde os outros o aguardavam.</p>
+      <p>Pichu estava tentando subir nas costas de Kaos. Dark Cinderace discutia com Lycanroc. Luke conversava com Ophanim. Mr G. jogava cartas com Zip.</p>
+      <p>Lua observou Frost chegar.</p>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— E aí? Como foi?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Acho que ganhei um problema.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Mais um?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Um problema vermelho.</div>
+      <p>Kaos riu.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Bem-vindo ao clube.</div>
+      <p>A câmera se afasta de todos reunidos.</p>
+      <p>No horizonte, os portais da Omega Timeline começam a se abrir.</p>
+    </div>
+    <div class="ep-end">FIM DA TEMPORADA 1</div>
+  </article>
+</section>
+
+<!-- ==================== TEMPORADA 2 ==================== -->
+<section id="t2" class="season">
+  <div class="season-header">
+    <div class="epno">Temporada 2</div>
+    <h2>EVERYTHING THAT'S LEFT</h2>
+    <p>Quando a liberdade deixa de ser uma descoberta individual, ela se transforma em uma escolha coletiva. E quando alguém decide lutar contra todos, a pergunta deixa de ser quem é mais forte: passa a ser o que ainda merece ser preservado.</p>
+  </div>
+
+  <!-- EP 1 T2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 1 — A OMEGA TIMELINE</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O chamado</div>
+      <p>A Omega Timeline estava em movimento.</p>
+      <p>Árvores Universais se conectavam por raízes luminosas, enquanto diferentes Lordversos projetavam suas realidades no horizonte. Portais apareciam e desapareciam, revelando mundos que jamais haviam compartilhado o mesmo espaço.</p>
+      <p>True!Frost!, True!Leafy!, Mr G. Frost, Ophanim!Frost! e os demais chegaram à dimensão.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— É maior do que eu imaginava.</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Você diz isso sobre qualquer lugar que tenha mais de dois andares.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— E normalmente estou certo.</div>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— A Omega Timeline não é simplesmente uma região. Ela funciona como uma estrutura de possibilidades interligadas.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— E é por isso que precisamos ter cuidado. Cada decisão pode alcançar mais de uma realidade.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Então é só não tomar decisões ruins.</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Você deveria começar seguindo seu próprio conselho.</div>
+      <p>Pichu soltou uma gargalhada.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — Alpha!Apogeu!</div>
+      <p>Uma esfera de luz apareceu no centro da dimensão.</p>
+      <p>Dela surgiu Alpha!Apogeu!, acompanhado por uma energia azul característica.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Vocês demoraram.</div>
+      <p>True!Frost! aproximou-se.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Precisávamos resolver algumas coisas.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Percebi. O Mundo Psiquiatra Eterno está alterando a forma como as linhas temporais se relacionam.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Você veio reclamar?</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Vim avisar que alguém está mexendo na Omega Timeline.</div>
+      <div class="dialogue"><span class="speaker">LUA.STL</span>— Ciel?</div>
+      <p>Alpha!Apogeu! assentiu.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Ele está reunindo forças e estudando as estruturas dos Lordversos.</div>
+      <p>True!Frost! ficou pensativo.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ele quer uma batalha.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Não apenas uma batalha. Quer provar alguma coisa.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — A chegada de Ciel</div>
+      <p>Uma abertura vermelha apareceu.</p>
+      <p>Ciel atravessou o portal.</p>
+      <p>Ele olhou para Alpha!Apogeu! e depois para True!Frost!.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não precisam falar de mim como se eu não estivesse aqui.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Então apareça antes de começarmos a discutir.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Continua com esse senso de humor.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— O que você está planejando?</div>
+      <p>Ciel ergueu a mão. Uma projeção de várias criaturas lendárias apareceu.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Estou preparando uma batalha em escala que nenhum de nós experimentou.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Usando o Grudge Virus?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não como substituto da minha força. Como parte do meu arsenal.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Espero que saiba o que está fazendo.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu também.</div>
+      <p>Ciel desapareceu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A primeira invasão</div>
+      <p>Uma criatura gigantesca surgiu entre duas Árvores Universais.</p>
+      <p>Ela tinha o corpo formado por fragmentos de diferentes Lordversos e atacava tudo ao redor.</p>
+      <p>Ophanim abriu seus anéis.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Formação de contenção!</div>
+      <p>Mr G. avançou com uma onda congelante. Lycanroc correu pela raiz de uma Árvore Universal e saltou sobre a criatura, atingindo sua cabeça.</p>
+      <p>Kaos e Luke coordenaram um ataque conjunto.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Luke, abre uma passagem!</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Já está aberta!</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Então por que você está na minha frente?!</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Porque você correu para o lado errado!</div>
+      <p>Pichu disparou uma descarga elétrica no núcleo exposto.</p>
+      <p>Dark Cinderace completou o ataque com uma explosão de fogo.</p>
+      <p>A criatura foi lançada contra uma estrutura vazia e se desfez.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — Uma promessa de guerra</div>
+      <p>Depois do confronto, True!Frost! observou a Omega Timeline.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Isso foi apenas um teste.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Sim.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ele quer que todos participem.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Então todos terão a oportunidade de escolher.</div>
+      <p>Alpha!Apogeu! olhou para os portais.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— A próxima batalha não será pequena.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Ótimo. Já estava ficando entediado.</div>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 1</div>
+  </article>
+
+  <!-- EP 2 T2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 2 — OS MONSTROS TAMBÉM PODEM ESCOLHER</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O encontro com Fear Proxy</div>
+      <p>Em uma dimensão escura, Fear Proxy observava uma antiga gravação.</p>
+      <p>A aparência lembrava a figura inquietante de Tails Doll Creepypasta: uma presença silenciosa, artificial e ameaçadora.</p>
+      <p>Mas Fear Proxy não era apenas uma referência de terror. Era um indivíduo com pensamentos próprios.</p>
+      <p>Uma voz surgiu atrás dele.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Ainda assistindo a isso?</div>
+      <p>Fear Proxy não respondeu imediatamente.</p>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— É uma lembrança.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Você gosta de lembranças?</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Gosto de saber que elas aconteceram.</div>
+      <p>iNSaNiTY aproximou-se.</p>
+      <p>Sua presença carregava a estética de Sonic.exe, e a energia digital ao redor dele parecia corromper o ambiente.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Durante muito tempo, todos esperaram que eu aparecesse para destruir alguma coisa.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— E você fez isso.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Fiz. Mas não quero passar o resto da existência repetindo a mesma cena.</div>
+      <p>Fear Proxy olhou para ele.</p>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Então não repita.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — A Anti Code</div>
+      <p>Schizo, Python, Hate.You e Hecktor estavam reunidos em uma sala digital.</p>
+      <p>Uma projeção de Ciel apareceu.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Preciso de vocês.</div>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Isso é um convite ou uma ordem?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Um convite.</div>
+      <div class="dialogue"><span class="speaker">PYTHON</span>— E o que ganhamos?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— A oportunidade de participar de algo maior do que uma simples disputa.</div>
+      <div class="dialogue"><span class="speaker">HATE.YOU</span>— Você quer derrotar True!Frost!.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Quero provar que consigo vencê-lo.</div>
+      <div class="dialogue"><span class="speaker">HECKTOR</span>— E se perder?</div>
+      <p>Ciel sorriu.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Então terei uma razão para tentar novamente.</div>
+      <p>Schizo soltou uma risada.</p>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Pelo menos ele é honesto.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — A batalha dos arquivos</div>
+      <p>Uma falha digital abriu-se sobre a dimensão.</p>
+      <p>Várias entidades corrompidas começaram a sair dela.</p>
+      <p>Python tentou controlar o fluxo de dados, mas a falha se multiplicava.</p>
+      <div class="dialogue"><span class="speaker">PYTHON</span>— Isso está se reproduzindo em camadas!</div>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Então parem de olhar e ataquem!</div>
+      <p>Hate.You avançou, destruindo uma das entidades. Hecktor protegeu a retaguarda, enquanto iNSaNiTY abriu uma passagem pelo espaço digital.</p>
+      <p>Fear Proxy desapareceu por alguns segundos.</p>
+      <p>Uma das criaturas tentou atacar Schizo pelas costas.</p>
+      <p>Fear Proxy surgiu atrás dela e a derrubou.</p>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Você poderia ter avisado!</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Você estava ocupado gritando.</div>
+      <p>iNSaNiTY riu.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Essa equipe é um desastre.</div>
+      <div class="dialogue"><span class="speaker">PYTHON</span>— E você está nela.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Exatamente.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A escolha de Hollow!Frost!</div>
+      <p>Hollow!Frost! chegou à dimensão.</p>
+      <p>Ciel observou sua presença.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você veio.</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Vim observar.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— E o que achou?</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Você está tentando vencer alguém que já não precisa provar nada.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Talvez seja justamente por isso que quero vencê-lo.</div>
+      <p>Hollow ficou em silêncio.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Posso lutar ao seu lado.</div>
+      <p>Ciel ergueu uma sobrancelha.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Tem certeza?</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Não confunda minha escolha com submissão. Tenho meus próprios motivos.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não esperaria outra coisa.</div>
+      <p>Hollow olhou para o horizonte.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Quero descobrir até onde podemos chegar sem esconder nossas capacidades.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — Kai!Frost! toma uma posição</div>
+      <p>Do outro lado da Omega Timeline, Kai!Frost! observava a movimentação.</p>
+      <p>True!Frost! aproximou-se.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você vai ficar aqui?</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Não. Vou lutar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ao meu lado?</div>
+      <p>Kai olhou para ele.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Ao lado de ALL LORD Midori, quando chegar a hora.</div>
+      <p>Frost sorriu.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então vamos precisar de você.</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Eu sei.</div>
+      <p>A câmera mostra Ciel, Hollow, Fear Proxy, iNSaNiTY e a Anti Code reunidos.</p>
+      <p>A guerra estava começando a tomar forma.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 2</div>
+  </article>
+
+  <!-- EP 3 T2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 3 — QUARENTA E UMA POSSIBILIDADES</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — A convocação dos Frosts</div>
+      <p>True!Leafy! abriu o Mundo Psiquiatra Eterno no centro da Omega Timeline.</p>
+      <p>Portais começaram a surgir.</p>
+      <p>Um após o outro, os Frosts atravessaram as passagens. Longsmoi e as demais variantes chegaram, cada um com uma aparência, uma história e uma aritmética própria.</p>
+      <p>Não eram cópias descartáveis. Eram indivíduos com experiências diferentes.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Obrigado por virem.</div>
+      <div class="dialogue"><span class="speaker">FROST DE UMA DAS VARIANTES</span>— Você disse que precisávamos conversar.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Precisamos decidir como vamos enfrentar o que está acontecendo.</div>
+      <div class="dialogue"><span class="speaker">OUTRO FROST</span>— E se não quisermos lutar?</div>
+      <p>Leafy respondeu sem hesitar.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Então não lutarão. A liberdade não deixa de existir quando alguém escolhe um caminho diferente do nosso.</div>
+      <p>Longsmoi observou os outros.</p>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Mas se escolhermos lutar, não seremos apenas reforços?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não. Cada um de vocês terá uma função, uma decisão e um momento próprio.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — A arena das possibilidades</div>
+      <p>Ophanim!Frost! criou uma arena com diferentes camadas dimensionais.</p>
+      <p>Cada Frost enfrentaria uma prova de adaptação.</p>
+      <p>Kai!Frost! foi o primeiro.</p>
+      <p>Ele enfrentou uma criatura que copiava seus movimentos.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Vai copiar tudo?</div>
+      <p>A criatura repetiu sua postura.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Então copia isso!</div>
+      <p>Kai mudou o ritmo do combate e atacou de um ângulo inesperado.</p>
+      <p>A criatura caiu.</p>
+      <p>Mr G. Frost enfrentou outra que manipulava o gelo.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Gelo contra gelo? Isso é pessoal.</div>
+      <p>Ele criou uma estrutura congelante e a destruiu por dentro com uma explosão térmica.</p>
+      <p>Ophanim observava.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Interessante. A força não está na quantidade de energia, mas na compreensão da estrutura.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — A batalha de Longsmoi</div>
+      <p>Longsmoi foi cercado por três adversários.</p>
+      <p>Ele recuou.</p>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Eu não sou tão forte quanto os outros.</div>
+      <p>True!Leafy! observava de longe.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— E quem disse que precisa ser?</div>
+      <p>Longsmoi respirou fundo.</p>
+      <p>Em vez de tentar superar os três inimigos individualmente, utilizou o próprio terreno para separar suas posições.</p>
+      <p>Criou uma abertura, desviou de um ataque e conseguiu neutralizar os três.</p>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Eu consegui?</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Conseguiu.</div>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Sem precisar ser o mais forte.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Bem-vindo à descoberta.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — O encontro com Ciel</div>
+      <p>Ciel observava os treinamentos de longe.</p>
+      <p>True!Frost! aproximou-se.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você veio estudar nossas estratégias?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Vim conhecer seus aliados.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— E?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— São mais interessantes do que imaginei.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você poderia simplesmente dizer que gostou deles.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não abuse.</div>
+      <p>Os dois ficaram observando os Frosts treinarem.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eles realmente acreditam que podem enfrentar qualquer coisa juntos.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Não precisam acreditar que podem vencer tudo. Precisam saber que não estão sozinhos.</div>
+      <p>Ciel não respondeu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — A invasão</div>
+      <p>Um exército de criaturas do Grudge Virus surgiu na arena.</p>
+      <p>Ciel não estava presente.</p>
+      <p>As criaturas começaram a atacar as variantes.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Formação defensiva!</div>
+      <p>Kai avançou pela frente. Mr G. e Ophanim coordenaram uma barreira. Longsmoi organizou os Frosts em grupos menores.</p>
+      <p>True!Frost! atravessou a linha inimiga e atingiu o núcleo da invasão.</p>
+      <p>A batalha se espalhou pela arena.</p>
+      <p>Os Frosts utilizaram poderes diferentes, combinando suas aritméticas e habilidades em ataques coordenados.</p>
+      <p>Nenhum ficou apenas assistindo.</p>
+      <p>Quando o último inimigo caiu, todos estavam cansados.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Isso foi divertido.</div>
+      <div class="dialogue"><span class="speaker">LONGSMOI</span>— Você chama isso de divertido?</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Você não?</div>
+      <p>Longsmoi começou a rir.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 6 — A ameaça de Lordverse!Hydra!</div>
+      <p>Em outra dimensão, Ciel observava o Grudge Virus.</p>
+      <p>Uma projeção de sua futura transformação apareceu.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Ainda não.</div>
+      <p>Hollow!Frost! aproximou-se.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Está esperando o momento certo?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Estou esperando que todos estejam prontos para entender o que significa enfrentar minha verdadeira força.</div>
+      <p>A projeção vermelha se expandiu.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 3</div>
+  </article>
+
+  <!-- EP 4 T2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 4 — O PLANO DOS QUE NÃO ERAM INIMIGOS</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — A reunião dos lados opostos</div>
+      <p>Ciel reuniu seus aliados em uma dimensão vermelha.</p>
+      <p>Fear Proxy, iNSaNiTY, Schizo, Python, Hate.You, Hecktor e Hollow!Frost! estavam presentes.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não quero uma vitória baseada em desorganização. Quero que cada um entenda sua função.</div>
+      <div class="dialogue"><span class="speaker">PYTHON</span>— Precisamos estudar a estrutura da Omega Timeline.</div>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— E descobrir como impedir que os Frosts se reorganizem.</div>
+      <div class="dialogue"><span class="speaker">HATE.YOU</span>— Podemos atacar os portais.</div>
+      <div class="dialogue"><span class="speaker">HECKTOR</span>— Isso obrigaria todos a se dividirem.</div>
+      <p>Fear Proxy observava em silêncio.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— E você?</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Posso criar distrações. Mas não vou desperdiçar minhas ações em ataques sem propósito.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Eu posso abrir caminhos digitais e distorcer as rotas de movimentação.</div>
+      <p>Hollow ergueu a mão.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— E eu posso absorver a energia negativa acumulada nas estruturas inimigas.</div>
+      <p>Ciel assentiu.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Então temos um plano.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — O primeiro ataque</div>
+      <p>A equipe avançou contra uma base dimensional.</p>
+      <p>Schizo criou ilusões digitais para confundir os defensores. Python interferiu nos sistemas de proteção, enquanto Hate.You e Hecktor abriram caminho.</p>
+      <p>Fear Proxy apareceu em diferentes pontos, criando uma sensação de perseguição constante.</p>
+      <p>iNSaNiTY atravessou os sistemas e abriu uma passagem para Ciel.</p>
+      <p>Hollow absorveu parte da energia negativa da estrutura.</p>
+      <p>A base começou a desmoronar.</p>
+      <p>Mas Mr G. Frost surgiu diante deles.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Vocês poderiam ter batido na porta.</div>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Não sabíamos que havia recepção.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Péssimo atendimento, então.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — Mr G. contra Hollow</div>
+      <p>Hollow avançou.</p>
+      <p>Mr G. criou uma muralha de gelo, mas Hollow absorveu a energia negativa que sustentava sua estrutura.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Seu gelo não vai me prender.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Não era para prender.</div>
+      <p>Mr G. detonou a muralha por dentro, lançando fragmentos congelados em todas as direções.</p>
+      <p>Hollow desviou e criou uma onda de energia escura.</p>
+      <p>Os dois trocaram golpes em alta velocidade.</p>
+      <p>Mr G. foi empurrado para trás, mas recuperou o equilíbrio.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Você está mais forte.</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Finalmente percebeu.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Não se acostume com elogios.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — A Equipe Caótica entra em campo</div>
+      <p>Kaos e Luke chegaram com Lycanroc, Pichu e Dark Cinderace.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Todo mundo pronto?</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— EU NASCI PRONTO!</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Você nasceu gritando.</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— E continua assim.</div>
+      <p>Luke abriu uma barreira.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Vamos proteger a saída. Não podemos deixar que atinjam as Árvores Universais.</div>
+      <p>Kaos avançou contra Hecktor.</p>
+      <p>Os dois trocaram golpes. Lycanroc interceptou Hate.You, enquanto Dark Cinderace enfrentou Schizo.</p>
+      <p>Pichu disparou eletricidade contra uma estrutura digital que iNSaNiTY tentava controlar.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Você está atrapalhando meu sistema!</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— ESSA É A IDEIA!</div>
+      <p>Fear Proxy apareceu atrás de Pichu.</p>
+      <p>Luke interceptou o ataque.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Não encosta nele.</div>
+      <p>Fear Proxy recuou.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — O recuo estratégico</div>
+      <p>A batalha começou a ficar instável.</p>
+      <p>Ciel percebeu que o objetivo principal havia sido alcançado: estudar as respostas dos Frosts e suas alianças.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Recuem!</div>
+      <p>Schizo abriu um portal.</p>
+      <p>Hollow foi o último a sair.</p>
+      <p>Antes de desaparecer, olhou para Mr G.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Ainda não terminamos.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Eu sei.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 6 — A conversa após a luta</div>
+      <p>A equipe se reuniu.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eles estavam testando nossas defesas.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— E conseguiram informações.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então precisamos mudar nossa estratégia.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Podemos mudar para uma estratégia com comida?</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Finalmente uma ideia inteligente.</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Vocês são impossíveis.</div>
+      <p>True!Frost! olhou para a Omega Timeline.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— A próxima luta será diferente.</div>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 4</div>
+  </article>
+
+  <!-- EP 5 T2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 5 — A QUEDA DE ALL LORD MIDORI</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — A transformação de Ciel</div>
+      <p>Ciel estava diante de uma estrutura colossal.</p>
+      <p>O Grudge Virus dos Pokémon lendários começou a circular por seu corpo.</p>
+      <p>A energia não o dominava completamente. Ele a canalizava, organizando cada manifestação como parte de seu próprio arsenal.</p>
+      <p>Hollow!Frost! observava.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Você realmente vai fazer isso?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Sim.</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Depois disso, não haverá como fingir que é apenas uma disputa amistosa.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Nunca foi.</div>
+      <p>O Grudge Virus se expandiu.</p>
+      <p>Uma forma diferente começou a surgir.</p>
+      <p>Seu corpo assumiu uma aparência de Glaceon com características de coelho, acompanhado por roupas vermelhas.</p>
+      <p>A energia vermelha cobriu a dimensão.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— LORDVERSE!HYDRA!</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — A transformação de True!Frost!</div>
+      <p>Na Omega Timeline, True!Frost! observava a transformação.</p>
+      <p>True!Leafy! aproximou-se.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Você sabe o que isso significa?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Sei.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não precisa aceitar uma transformação apenas porque ele escolheu uma.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu sei. Mas quero descobrir até onde posso chegar.</div>
+      <p>Kai!Frost! aproximou-se.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Então vamos juntos.</div>
+      <p>True!Frost! fechou os olhos.</p>
+      <p>O Mundo Psiquiatra Eterno se abriu atrás dele.</p>
+      <p>As memórias positivas dos Frosts começaram a se manifestar.</p>
+      <p>A energia verde atravessou a Omega Timeline.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— ALL LORD MIDORI.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — O confronto começa</div>
+      <p>Lordverse!Hydra! apareceu diante de ALL LORD Midori.</p>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— Finalmente.</div>
+      <div class="dialogue gold"><span class="speaker">ALL LORD MIDORI</span>— Você preparou tudo isso só para lutar comigo?</div>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— Não. Preparei tudo isso para provar que sou superior.</div>
+      <div class="dialogue gold"><span class="speaker">ALL LORD MIDORI</span>— Então vamos descobrir.</div>
+      <p>Ciel ergueu a mão.</p>
+      <p>Uma manifestação lendária surgiu atrás dele e disparou uma onda de energia.</p>
+      <p>ALL LORD Midori bloqueou o ataque e avançou.</p>
+      <p>O primeiro golpe atingiu a defesa de Hydra, mas o rival respondeu com uma sequência de ataques físicos.</p>
+      <p>Midori desviou, criou uma barreira e contra-atacou.</p>
+      <p>A arena inteira começou a se fragmentar.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — Os lendários entram em combate</div>
+      <p>Lordverse!Hydra! abriu vários portais.</p>
+      <p>Diferentes forças lendárias surgiram, cada uma canalizando uma expressão do Grudge Virus.</p>
+      <p>Uma delas atacou pela frente. Outra tentou cercar Midori por trás. Uma terceira distorceu a gravidade da arena.</p>
+      <p>ALL LORD Midori respondeu criando manifestações conceituais.</p>
+      <p>As estruturas verdes se expandiram, interceptando os ataques.</p>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— Você ainda está tentando controlar tudo!</div>
+      <div class="dialogue gold"><span class="speaker">ALL LORD MIDORI</span>— E você ainda está tentando provar alguma coisa!</div>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— EU VOU PROVAR QUE SOU MELHOR!</div>
+      <p>Hydra concentrou a energia em um único golpe.</p>
+      <p>Midori tentou resistir, mas o ataque atravessou sua defesa.</p>
+      <p>Uma explosão vermelha tomou a arena.</p>
+      <p>Quando a luz desapareceu, ALL LORD Midori havia perdido a transformação.</p>
+      <p>True!Frost! estava novamente em sua forma original.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — A divisão</div>
+      <p>Kai!Frost! correu até Frost.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Você está bem?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Estou.</div>
+      <p>Hollow!Frost! permaneceu ao lado de Hydra.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— O combate ainda não acabou.</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Então venha descobrir.</div>
+      <p>Os dois se encararam.</p>
+      <p>True!Leafy! observou os lados opostos.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Não podemos simplesmente tentar superar a energia dele.</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Então o que fazemos?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Precisamos alcançar aquilo que o Grudge Virus não consegue compreender.</div>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Memórias?</div>
+      <p>Leafy assentiu.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Memórias positivas. Não como armas de controle, mas como lembranças que cada um escolheu preservar.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 6 — O plano final</div>
+      <p>A Equipe Caótica reuniu-se com Fear Proxy, iNSaNiTY e a Anti Code.</p>
+      <p>Kaos olhou para os antigos adversários.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Então vocês querem ajudar a parar Hydra?</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Queremos impedir que ele seja consumido pelo próprio poder.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Isso é uma coisa boa, né?</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— É uma escolha.</div>
+      <p>Schizo cruzou os braços.</p>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Não significa que viramos amigos de todo mundo.</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Ninguém pediu isso.</div>
+      <p>Luke olhou para Kaos.</p>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Podemos fazer isso.</div>
+      <p>Kaos assentiu.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Então vamos montar o plano.</div>
+      <p>A câmera mostra os dois lados preparando-se.</p>
+      <p>A batalha final estava próxima.</p>
+    </div>
+    <div class="ep-end">FIM DO EPISÓDIO 5</div>
+  </article>
+
+  <!-- EP 6 T2 -->
+  <article class="episode">
+    <h3>EPISÓDIO 6 — EVERYTHING THAT'S LEFT</h3>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O último campo de batalha</div>
+      <p>A batalha final começou na interseção de vários Lordversos.</p>
+      <p>Árvores Universais se conectavam em todas as direções. A Omega Timeline estava aberta, e diferentes realidades podiam ser vistas no horizonte.</p>
+      <p>Lordverse!Hydra! aguardava no centro da arena.</p>
+      <p>Hollow!Frost! estava ao seu lado.</p>
+      <p>Do outro lado, True!Frost! estava acompanhado por Kai!Frost!, True!Leafy!, Mr G. Frost, Ophanim!Frost!, Alpha!Apogeu!, a Glitch Code e os demais Frosts.</p>
+      <p>A Equipe Caótica chegou logo depois.</p>
+      <p>Kaos, Luke, Lycanroc, Pichu e Dark Cinderace ficaram lado a lado.</p>
+      <p>Fear Proxy, iNSaNiTY, Schizo, Python, Hate.You e Hecktor apareceram em seguida.</p>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— Então todos vieram.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você pediu uma batalha.</div>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— Eu pedi uma vitória.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então terá que conquistar.</div>
+      <p>Ciel sorriu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — O ataque dos lendários</div>
+      <p>Lordverse!Hydra! abriu os portais.</p>
+      <p>As manifestações lendárias surgiram e começaram a atacar.</p>
+      <p>O primeiro grupo avançou contra os Frosts.</p>
+      <p>Kai!Frost! interceptou uma criatura e a lançou contra uma estrutura dimensional.</p>
+      <p>Mr G. congelou uma segunda manifestação, enquanto Ophanim criou uma formação de anéis para conter outra.</p>
+      <div class="dialogue"><span class="speaker">OPHANIM!FROST!</span>— Não deixem que atravessem a barreira!</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Estou tentando!</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— TENTEM MAIS RÁPIDO!</div>
+      <p>Kai avançou e atingiu outra criatura com um golpe concentrado.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — A Equipe Caótica contra o Grudge</div>
+      <p>Kaos liderou a equipe.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Luke, protege Pichu! Lycanroc, comigo! Dark Cinderace, ataca a formação central!</div>
+      <p>Luke criou uma barreira psíquica.</p>
+      <p>Pichu carregou energia elétrica.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— EU TENHO UMA IDEIA!</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Isso geralmente termina mal.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— MAS É UMA BOA IDEIA!</div>
+      <p>Pichu disparou uma descarga que atravessou a barreira de Luke e atingiu a formação inimiga.</p>
+      <p>Lycanroc aproveitou a abertura e avançou.</p>
+      <p>Dark Cinderace completou o ataque com uma explosão de fogo.</p>
+      <p>Kaos atravessou a fumaça e atingiu o núcleo da manifestação.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Equipe Caótica!</div>
+      <div class="dialogue"><span class="speaker">TODOS</span>— CAÓTICA!</div>
+      <p>A formação inimiga desabou.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 4 — Fear Proxy e iNSaNiTY</div>
+      <p>Fear Proxy e iNSaNiTY avançaram contra uma estrutura que protegia a canalização do Grudge Virus.</p>
+      <p>Schizo e Python interferiram nos sistemas.</p>
+      <div class="dialogue"><span class="speaker">PYTHON</span>— Estou encontrando a origem do fluxo!</div>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Então interrompe!</div>
+      <div class="dialogue"><span class="speaker">PYTHON</span>— Não é tão simples!</div>
+      <div class="dialogue"><span class="speaker">HECKTOR</span>— Eu seguro a entrada!</div>
+      <p>Hate.You avançou para conter as criaturas que tentavam impedir o grupo.</p>
+      <p>Fear Proxy surgiu atrás da estrutura e atingiu um dos pontos de sustentação.</p>
+      <p>iNSaNiTY abriu uma ruptura digital.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Agora!</div>
+      <p>A estrutura foi desativada.</p>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Conseguimos.</div>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Não comemorem ainda.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Você realmente não sabe aproveitar nada.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 5 — Hollow!Frost! contra Kai!Frost!</div>
+      <p>Hollow avançou contra Kai.</p>
+      <p>Os dois se encontraram no centro de uma dimensão escura.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Então você escolheu ficar com ele.</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Escolhi descobrir o que acontece quando não escondemos nossas capacidades.</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— E acha que isso exige ficar contra todos nós?</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Não. Mas exige que eu faça minhas próprias escolhas.</div>
+      <p>Hollow disparou uma onda de energia negativa.</p>
+      <p>Kai desviou e contra-atacou.</p>
+      <p>Os dois trocaram golpes em velocidade extrema.</p>
+      <p>Hollow absorveu parte da energia de Kai, mas ele mudou a natureza de seu ataque e rompeu a absorção.</p>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Você não é obrigado a permanecer ao lado dele!</div>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— E você não é obrigado a me convencer!</div>
+      <p>Kai acertou um golpe que lançou Hollow para trás.</p>
+      <p>Hollow se levantou.</p>
+      <p>Os dois continuaram lutando, mas sem ódio.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 6 — O Mundo Psiquiatra Eterno se abre</div>
+      <p>True!Leafy! ergueu as mãos.</p>
+      <p>O Mundo Psiquiatra Eterno apareceu sobre a arena.</p>
+      <p>Dessa vez, não havia salas individuais. Todas as memórias positivas estavam conectadas.</p>
+      <p>Os Frosts começaram a recordar suas aventuras, amizades, rivalidades, momentos engraçados e descobertas.</p>
+      <p>Mr G. lembrou de sua primeira jornada.</p>
+      <p>Ophanim recordou sua descoberta da liberdade.</p>
+      <p>Longsmoi lembrou que não precisava competir para existir.</p>
+      <p>Kaos recordou o reencontro com Pichu, Luke, Lycanroc e Dark Cinderace.</p>
+      <p>Lua.STL e Golden.STL lembraram suas conversas e brincadeiras.</p>
+      <p>A Glitch Code se uniu à manifestação.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Ninguém precisa entregar suas memórias a outra pessoa. Cada um escolhe o que deseja compartilhar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ciel! Você não precisa ser consumido por isso!</div>
+      <p>Lordverse!Hydra! começou a receber a energia das memórias.</p>
+      <p>O Grudge Virus reagiu violentamente.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 7 — A última ofensiva</div>
+      <p>Ciel reuniu toda a energia restante.</p>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— EU NÃO VOU PERDER!</div>
+      <p>Ele lançou um ataque colossal.</p>
+      <p>True!Frost! avançou.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então lute como você mesmo!</div>
+      <p>Os dois colidiram.</p>
+      <p>A arena inteira foi tomada por uma explosão.</p>
+      <p>Ciel tentou canalizar novamente as forças lendárias, mas a estrutura que sustentava a vantagem do Grudge Virus havia sido desativada por Fear Proxy, iNSaNiTY e a Anti Code.</p>
+      <p>Kaos e a Equipe Caótica mantinham as aberturas dimensionais protegidas.</p>
+      <p>Mr G. e Ophanim impediam que as estruturas colapsassem.</p>
+      <p>Alpha!Apogeu! estabilizava a Omega Timeline.</p>
+      <p>Kai!Frost! voltou a se posicionar ao lado de True!Frost!.</p>
+      <p>Hollow olhou para Ciel.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Você ainda pode escolher.</div>
+      <p>Ciel hesitou.</p>
+      <div class="dialogue red"><span class="speaker">LORDVERSE!HYDRA!</span>— Eu... não vou recuar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ninguém está pedindo que você fuja.</div>
+      <p>Frost avançou com todos os outros Frosts.</p>
+      <p>A energia coletiva atingiu Lordverse!Hydra! e interrompeu a canalização lendária.</p>
+      <p>A transformação começou a se desfazer.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 8 — A derrota sem apagamento</div>
+      <p>Ciel caiu de joelhos.</p>
+      <p>A forma Lordverse!Hydra! desapareceu, revelando sua aparência anterior.</p>
+      <p>True!Frost! aproximou-se.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu perdi.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Sim.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você não vai dizer que não importa?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Importa. Você queria vencer e não conseguiu.</div>
+      <p>Ciel olhou para o chão.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Então acabou?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— A batalha acabou.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— E a rivalidade?</div>
+      <p>Frost sorriu.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Essa continua.</div>
+      <p>Ciel soltou uma pequena risada.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Na próxima vez, vou vencer.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Tente.</div>
+      <p>Hollow se aproximou.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Então acabou mesmo?</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Por enquanto.</div>
+      <p>Os dois se olharam.</p>
+      <div class="dialogue"><span class="speaker">HOLLOW!FROST!</span>— Você ainda quer lutar?</div>
+      <div class="dialogue"><span class="speaker">KAI!FROST!</span>— Sempre.</div>
+      <p>Eles sorriram.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 9 — Tudo o que restou</div>
+      <p>A batalha havia terminado.</p>
+      <p>Os Frosts estavam reunidos. A Equipe Caótica também.</p>
+      <p>Kaos sentou-se ao lado de Luke.</p>
+      <p>Pichu estava dormindo sobre Dark Cinderace. Lycanroc observava o horizonte.</p>
+      <p>Mr G. conversava com Ophanim.</p>
+      <p>Lua.STL e Golden.STL estavam discutindo uma nova brincadeira com Zip.</p>
+      <p>Alpha!Apogeu! permanecia próximo à estrutura da Omega Timeline.</p>
+      <p>Fear Proxy e iNSaNiTY observavam os outros à distância.</p>
+      <p>Schizo aproximou-se.</p>
+      <div class="dialogue"><span class="speaker">SCHIZO</span>— Então... agora somos parte da equipe?</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Vocês podem escolher.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Gosto dessa resposta.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Eu também.</div>
+      <p>Ciel aproximou-se de True!Frost!.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você realmente acha que tudo isso pode continuar?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Não sei.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Outra resposta que não é muito tranquilizadora.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Mas é honesta.</div>
+      <p>Os dois olharam para o horizonte.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 10 — O último jogo</div>
+      <p>O Mundo Psiquiatra Eterno permaneceu aberto.</p>
+      <p>Não como uma prisão, nem como um lugar obrigatório. Era uma possibilidade de retorno à própria essência, disponível para quem desejasse compreender a si mesmo.</p>
+      <p>Acedia continuava presente como uma filosofia positiva: a liberdade de viver sem transformar cada instante em uma obrigação, sem precisar vencer todas as disputas e sem abandonar a alegria de existir.</p>
+      <p>True!Leafy! olhou para todos.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Então... o que fazemos agora?</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— COMIDA!</div>
+      <div class="dialogue"><span class="speaker">DARK CINDERACE</span>— Eu apoio.</div>
+      <div class="dialogue"><span class="speaker">LYCANROC</span>— Vocês só pensam nisso?</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Depois dessa batalha? Sim.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Vamos comer.</div>
+      <p>Mr G. levantou a mão.</p>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Eu conheço um lugar.</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Você vai pagar?</div>
+      <div class="dialogue"><span class="speaker">MR G. FROST</span>— Não.</div>
+      <div class="dialogue"><span class="speaker">ZIP.STL</span>— Então não conhece lugar nenhum.</div>
+      <p>Todos começaram a rir.</p>
+      <p>True!Frost! olhou para Ciel.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Na próxima, tente não trazer metade dos lendários.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Na próxima, tente não precisar de todos os seus amigos para me parar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Não prometo.</div>
+      <p>Os dois sorriram.</p>
+      <p>A câmera se afasta lentamente.</p>
+      <p>As Árvores Universais voltam a brilhar. Os Lordversos seguem seus caminhos. Os personagens se espalham por novas aventuras, livres para escolher o que desejam ser.</p>
+      <p>Uma última voz ecoa:</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Depois de tudo... ainda resta alguma coisa.</div>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— O quê?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Tudo aquilo que ainda podemos viver.</div>
+    </div>
+    <div class="ep-end">FIM DA TEMPORADA 2 · FIM DA SAGA DE ANIVERSÁRIO</div>
+  </article>
+</section>
+
+<!-- ==================== CAPÍTULO ESPECIAL DOS CASAIS ==================== -->
+<section id="casais" class="special">
+  <div class="special-header">
+    <div class="epno">Capítulo Especial · Depois da Batalha</div>
+    <h2>OS VÍNCULOS QUE ESCOLHEMOS</h2>
+    <p>Depois da última batalha, os personagens têm tempo para viver os vínculos que escolheram. Os relacionamentos abaixo são tratados como namoro nesta versão. O vínculo entre os quatro Frosts é uma relação quadrisal consensual; os demais são casais. As cenas são românticas e carinhosas, sem conteúdo sexual explícito.</p>
+  </div>
+
+  <!-- QUADRISAL -->
+  <div class="couple-block">
+    <h3>True!Frost! × Hydra!Frost! (Ciel) × Moon!Frost! × Steel!Frost!</h3>
+    <div class="tag">Relação quadrisal consensual · True, Ciel e Steel são machos · Moon é fêmea</div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O terraço das quatro luas</div>
+      <p>Uma dimensão calma, aberta sob um céu com quatro luas de tons diferentes. True!Frost!, Ciel, Moon!Frost! e Steel!Frost! estavam sentados em um círculo de pedra suave. O vento carregava um frio agradável.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ainda acho estranho que a gente tenha chegado aqui sem ninguém precisar impor regra nenhuma.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Estranho? Eu acho inconveniente. Vocês três complicam minha vida de formas que eu não previa.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Você gosta de complicação. Só não admite.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Ele admite. Só muda o tom da voz pra parecer que está reclamando.</div>
+      <p>Ciel cruzou os braços, mas não negou.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— ...Não é mentira.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então vamos ser honestos de uma vez. Isso aqui... o que somos... não é uma obrigação. É uma escolha que a gente renova toda vez que decide ficar.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Eu precisava ouvir isso. Durante muito tempo achei que vínculos eram coisas que a história escrevia e a gente só aceitava.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— E agora?</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Agora eu escolho. E escolho vocês três. Mesmo quando Ciel está insuportável.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu não sou insuportável. Sou seletivamente intenso.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Isso não melhora a situação.</div>
+      <p>Steel riu baixo, o som metálico da sua voz suavizado pelo ambiente.</p>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Eu gosto da intensidade dele. E da calma da Moon. E da teimosia do True. Cada um segura uma parte que os outros não precisam carregar sozinhos.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Você sempre fala como se estivesse organizando um relatório emocional.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Alguém precisa. Vocês três são caóticos demais pra deixar tudo no improviso.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu não sou caótico. Eu sou estratégico.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Estratégico em provocar True até ele sorrir.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— ...Funciona.</div>
+      <p>True olhou para os três e sentiu o peito mais leve.</p>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então combinamos. A gente conversa quando algo apertar. Ninguém fica carregando sozinho. E ninguém tenta controlar o espaço do outro.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Combinado.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Combinado.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— ...Combinado. Mas eu ainda vou tentar te vencer na próxima luta.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu conto com isso.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — Conversas em pares</div>
+      <p>Mais tarde, True e Ciel ficaram sozinhos por um momento, enquanto Moon e Steel conversavam um pouco afastados.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você realmente não se importa que eu ainda queira te superar?</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu me importaria se você fingisse que não quer. A honestidade é o que me faz confiar.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— ...Às vezes eu sinto saudade de você mesmo quando estamos no mesmo lugar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Então diga. Eu também sinto.</div>
+      <p>Ciel olhou para o lado, quase constrangido.</p>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Não se acostume com eu falando essas coisas em voz alta.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Eu não me acostumo. Eu agradeço cada vez.</div>
+      <p>Do outro lado, Moon encostou a cabeça no ombro de Steel.</p>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Você fica quieto demais às vezes. Eu fico sem saber se está tudo bem.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Estou bem. Só estou... presente. Com vocês. Isso ainda é novo pra mim.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Novo de um jeito bom?</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— De um jeito que eu não quero perder.</div>
+      <p>Moon sorriu e entrelaçou os dedos nos dele.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 3 — Os quatro juntos novamente</div>
+      <p>Quando voltaram a se reunir, o clima estava leve.</p>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Então... alguém quer conversar sobre limites de verdade ou vamos continuar fingindo que já resolvemos tudo?</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Você é chato.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— E você evita assuntos importantes. Alguém tem que equilibrar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ele tem razão. Eu gosto de tempo a sós com cada um de vocês. E também gosto quando estamos os quatro. Só preciso que a gente avise quando precisar de espaço.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Eu também. Às vezes eu só quero ficar em silêncio com alguém do lado. Sem conversa, sem expectativa.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Eu... posso tentar. Mas não prometo ser bom nisso logo de cara.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Ninguém está pedindo perfeição. Só presença.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— E honestidade. Mesmo quando a honestidade for “hoje eu não aguento ninguém”.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— ...Isso acontece com mais frequência do que eu admito.</div>
+      <p>Todos riram.</p>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— Então estamos de acordo. Relação de quatro, com espaço pra três, pra dois e pra um. Sem culpa.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Sem culpa.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Sem culpa. Mas com rivalidade.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Sempre com rivalidade. É a forma de carinho do Ciel.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— ...Calem a boca.</div>
+      <p>Mas ele estava sorrindo.</p>
+    </div>
+  </div>
+
+  <!-- KAOS × LUKE -->
+  <div class="couple-block">
+    <h3>Kaos × Lucario (Luke)</h3>
+    <div class="tag">Casal gay · Equipe Caótica</div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — Depois do anúncio</div>
+      <p>A Equipe Caótica estava reunida no pátio. Kaos havia acabado de contar, de forma direta e um pouco desajeitada, que ele e Luke estavam juntos. Pichu tinha gritado de alegria. Lycanroc tinha revirado os olhos, mas sorria. Dark Cinderace tinha feito uma piada sobre “finalmente”.</p>
+      <p>Agora, mais tarde, só os dois restavam.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu achei que ia virar um discurso de comandante. Você me salvou.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Eu segurei sua mão porque você estava prestes a transformar um sentimento simples em relatório de missão.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— ...É um hábito difícil de quebrar.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Eu sei. E eu gosto do seu jeito. Só não preciso que você prove que merece estar comigo toda vez que abre a boca.</div>
+      <p>Kaos ficou em silêncio por um momento.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Quando você está do meu lado, eu sinto que estou em casa. Mesmo quando o mundo está desmoronando.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Então fica. Eu não vou embora porque a missão acabou.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— E se eu perder o controle de novo?</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Então eu puxo você de volta. Como já fiz. Como vou continuar fazendo. Você não está sozinho nisso.</div>
+      <p>Kaos apoiou a testa no ombro de Luke.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Eu te amo. De um jeito quieto. Mas constante.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Eu também. De um jeito que não precisa de discurso.</div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — Escolhendo um restaurante</div>
+      <p>No dia seguinte, tentaram decidir onde comer.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Então... a gente sobreviveu ao fim do multiverso e agora precisa sobreviver a encontros românticos?</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Você já enfrentou coisas piores.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Discordo. Escolher um restaurante é muito mais difícil.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Então deixa eu escolher. Você só precisa aparecer.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Isso eu consigo.</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— E tentar não transformar a conversa em análise de ameaças.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— ...Vou tentar.</div>
+      <p>Luke riu e puxou Kaos pela mão.</p>
+    </div>
+  </div>
+
+  <!-- PICHU × KID!FROST! -->
+  <div class="couple-block">
+    <h3>Pichu × Kid!Frost!</h3>
+    <div class="tag">Casal gay · Doce e apropriado à idade · Sem sexualização</div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — O presente elétrico</div>
+      <p>Pichu estava andando em círculos, segurando uma caixinha pequena. Kid!Frost! observava, curioso.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Eu pensei em te dar uma estrela de verdade, mas aí lembrei que a gente não pode roubar constelações.</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Isso seria um pouco problemático, sim.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Então eu fiz uma. Com eletricidade. Ficou meio torta, mas é minha.</div>
+      <p>Ele abriu a caixa. Dentro havia um floco de energia amarela em formato de estrela irregular, que brilhava suavemente.</p>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— É a estrela mais feia e mais linda que eu já vi.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— EI!</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Eu disse que é linda. A feiura faz parte do charme.</div>
+      <p>Pichu ficou vermelho até as orelhas.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Eu... eu gosto de você. De verdade. Não só porque você faz gelo legal.</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Eu também gosto de você. Mesmo quando você grita com a comida.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— A comida merece respeito!</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Eu sei. E eu prometo te ensinar a fazer flocos de gelo em forma de estrela. Assim a gente combina.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Combinado! Mas a minha continua sendo a original.</div>
+      <p>Kid!Frost! guardou a estrela elétrica com cuidado e deu um abraço rápido em Pichu.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — Passeio sem missão</div>
+      <p>Eles caminhavam por um corredor dimensional iluminado por partículas suaves.</p>
+      <div class="dialogue"><span class="speaker">PICHU</span>— É estranho não ter ninguém tentando destruir o mundo agora.</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Estranho bom?</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Estranho gostoso. Tipo sobremesa depois da batalha.</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Você pensa em comida o tempo inteiro.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— E você pensa em gelo. A gente se completa.</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— ...Isso foi fofo demais. Eu não sei o que responder.</div>
+      <div class="dialogue"><span class="speaker">PICHU</span>— Não precisa. Só continua andando do meu lado.</div>
+      <p>Kid!Frost! estendeu a mão. Pichu segurou.</p>
+    </div>
+  </div>
+
+  <!-- FEAR PROXY × iNSaNiTY -->
+  <div class="couple-block">
+    <h3>Fear Proxy × iNSaNiTY</h3>
+    <div class="tag">Casal gay · Confiança construída na batalha</div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — Depois do silêncio</div>
+      <p>Em uma dimensão digital semi-corrompida, mas estável, Fear Proxy e iNSaNiTY estavam sentados lado a lado. O ambiente pulsava em tons de vermelho e preto suaves.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Você ficou quieto demais depois da luta.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Eu estava processando. Não é comum eu... ficar.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Ficar?</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Ficar perto de alguém sem precisar ameaçar ou desaparecer.</div>
+      <p>iNSaNiTY olhou para ele com uma expressão que quase parecia suave.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Eu também não costumo baixar a guarda. Mas com você... é diferente.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Diferente como?</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Eu não preciso performar o monstro o tempo inteiro. Você já viu o que eu sou e ainda assim está aqui.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Eu vi. E escolhi ficar. Não porque você é menos assustador. Porque você é você.</div>
+      <p>iNSaNiTY ficou em silêncio por um longo momento.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Eu gosto quando você não tenta me consertar. Só... acompanha.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Eu gosto quando você não precisa gritar pra ser ouvido.</div>
+      <p>Os dois ficaram olhando o horizonte digital. Nenhum precisou explicar mais nada.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — Um passeio sem destino</div>
+      <p>Eles caminhavam por uma rota que iNSaNiTY distorceu só o suficiente para ficar privada.</p>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Se alguém perguntar o que somos...</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Não precisamos responder. O vínculo é nosso.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Gosto dessa resposta.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— Eu também.</div>
+      <p>Fear estendeu a mão. iNSaNiTY hesitou só um segundo antes de aceitar.</p>
+    </div>
+  </div>
+
+  <!-- GOLDEN × ALPHA!APOGEU! -->
+  <div class="couple-block">
+    <h3>Golden.STL × Alpha!Apogeu!</h3>
+    <div class="tag">Casal gay · Liberdade e estabilidade</div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 1 — Depois da estabilização</div>
+      <p>Alpha!Apogeu! estava verificando as estruturas da Omega Timeline quando Golden se aproximou, as mãos nos bolsos e um sorriso leve.</p>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Você ainda está trabalhando? A batalha acabou horas atrás.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Estabilizar possibilidades não é algo que se termina de verdade. Só se equilibra.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Então equilibra depois. Agora vem conversar comigo.</div>
+      <p>Alpha olhou para ele, surpreso com a franqueza.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Você sempre fala como se o universo pudesse esperar.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Porque pode. Pelo menos por alguns minutos. Eu aprendi isso no STL. Às vezes a melhor coisa que a gente pode fazer é não fazer nada obrigatório.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Isso soa perigosamente com acedia.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Então a acedia e eu somos bons amigos. Vem.</div>
+      <p>Alpha hesitou, depois desativou o painel de monitoramento e acompanhou Golden.</p>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Cena 2 — O que restou entre eles</div>
+      <p>Eles se sentaram à beira de uma plataforma que olhava para várias linhas temporais ao mesmo tempo.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Eu não sou muito bom com... isso. Sentimentos que não envolvem cálculo de risco.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Eu também não preciso que você calcule. Só que você fique. Quando quiser. Como quiser.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— E se eu precisar de silêncio?</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Eu fico em silêncio com você. Ou afasto. Você escolhe. Eu só quero que a escolha exista.</div>
+      <p>Alpha olhou para Golden por um longo tempo.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Você é... livre de um jeito que eu admiro. E um pouco invejo.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Então vem aprender. Eu não mordo. A não ser que peça.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— ...Você é impossível.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— E você gosta.</div>
+      <p>Alpha não negou. Apenas se aproximou um pouco mais, o suficiente para seus ombros se tocarem.</p>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— Sim. Eu gosto.</div>
+    </div>
+  </div>
+
+  <!-- CENA FINAL DO CAPÍTULO ESPECIAL -->
+  <div class="couple-block">
+    <h3>Todos juntos · Uma última conversa</h3>
+    <div class="tag">Encerramento do capítulo especial</div>
+
+    <div class="scene">
+      <div class="scene-title">Cena final — O que ainda resta</div>
+      <p>Em algum ponto entre as dimensões, vários dos casais se encontraram por acaso em um espaço aberto. Não havia reunião oficial. Só gente que escolheu estar presente.</p>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Então... a gente sobreviveu ao fim do multiverso e agora precisa sobreviver a encontros românticos?</div>
+      <div class="dialogue blue"><span class="speaker">LUKE</span>— Você já enfrentou coisas piores.</div>
+      <div class="dialogue"><span class="speaker">KAOS</span>— Discordo. Escolher um restaurante é muito mais difícil.</div>
+      <div class="dialogue green"><span class="speaker">PICHU</span>— Eu voto em um lugar com sobremesa!</div>
+      <div class="dialogue"><span class="speaker">KID!FROST!</span>— Você vota em sobremesa até quando ninguém perguntou.</div>
+      <div class="dialogue"><span class="speaker">FEAR PROXY</span>— E se alguém perguntar, ele vota duas vezes.</div>
+      <div class="dialogue purple"><span class="speaker">iNSaNiTY</span>— Finalmente uma regra que vale a pena quebrar.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Parece que todo mundo está aprendendo a escolher.</div>
+      <div class="dialogue red"><span class="speaker">CIEL</span>— Alguns de nós já sabiam. Só não admitiam.</div>
+      <div class="dialogue"><span class="speaker">MOON!FROST!</span>— E agora admitimos. Em voz alta.</div>
+      <div class="dialogue"><span class="speaker">STEEL!FROST!</span>— Em voz alta e com testemunhas. Isso torna as coisas mais reais.</div>
+      <div class="dialogue"><span class="speaker">GOLDEN.STL</span>— Reais e livres. Essa combinação ainda me deixa um pouco tonto.</div>
+      <div class="dialogue blue"><span class="speaker">ALPHA!APOGEU!</span>— É uma tontura boa. Eu acho.</div>
+      <p>True!Leafy! apareceu no limite do grupo, apenas observando com um sorriso.</p>
+      <div class="dialogue green"><span class="speaker">TRUE!LEAFY!</span>— Vocês não precisam de mim pra isso. Mas é bom ver.</div>
+      <div class="dialogue gold"><span class="speaker">TRUE!FROST!</span>— Sempre é bom ter você por perto. Mesmo quando a gente não precisa de salvação.</div>
+      <p>Leafy apenas acenou e deixou o espaço para eles.</p>
+      <p>As conversas continuaram. Algumas sérias, outras bobas. Ninguém precisava vencer nada naquela noite.</p>
+      <p>Só restava viver.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EPÍLOGO ==================== -->
+<section id="epilogo" class="ending">
+  <div class="kicker">Epílogo final · Sétima dimensão</div>
+  <h2 style="font-family:'Cinzel',serif; color:var(--gold-soft); margin-bottom:20px;">O Canvas Universal</h2>
+  <p style="max-width:620px; margin:0 auto 25px; color:var(--text-muted);">
+    Quando todos retornam ao espaço tranquilo entre as linhas, uma presença se manifesta acima das Árvores Universais. Não precisa anunciar sua força. O próprio tecido de STLNBO reconhece a chegada do <strong style="color:var(--gold);">Guardião Junior</strong>, a entidade mais forte de STLNBO e ápice absoluto eterno do LORDVERSE.
+  </p>
+  <p style="max-width:620px; margin:0 auto 25px; color:var(--text-muted);">
+    Em suas mãos surge um Canvas Universal, amplo o bastante para conter universos, metaversos, linhas temporais e tudo aquilo que ainda não recebeu nome. Guardião Junior atravessa a sétima dimensão e começa a escrever. Não reescreve os acontecimentos para torná-los convenientes. Não apaga batalhas, erros, reconciliações, romances ou escolhas. Registra tudo como aconteceu dentro desta história.
+  </p>
+
+  <div class="dialogue" style="max-width:500px; margin:20px auto; text-align:left;">
+    <span class="speaker">Moon!Frost!</span>— Você está escrevendo um final?
+  </div>
+  <div class="dialogue gold" style="max-width:500px; margin:20px auto; text-align:left;">
+    <span class="speaker">Guardião Junior</span>— Não. Estou registrando que vocês chegaram até aqui. Um final pode fechar uma página. Não precisa fechar a vida.
+  </div>
+  <div class="dialogue" style="max-width:500px; margin:20px auto; text-align:left;">
+    <span class="speaker">True!Leafy!</span>— Então tudo isso fica guardado?
+  </div>
+  <div class="dialogue green" style="max-width:500px; margin:20px auto; text-align:left;">
+    <span class="speaker">Guardião Junior</span>— Cada escolha. Cada encontro. Cada batalha. Cada vez que vocês decidiram continuar.
+  </div>
+
+  <p style="max-width:620px; margin:25px auto; color:var(--text-muted);">
+    O Canvas brilha. Em uma parte, a Equipe Caótica aparece abraçada no pátio. Em outra, os Frosts compartilham uma refeição. Mais adiante, os casais caminham juntos. Ciel observa a própria assinatura ao lado da de True!Frost!, e pela primeira vez não tenta riscar o nome do rival. Mr G. acrescenta um desenho torto de uma sobremesa. Pichu desenha uma estrela elétrica. Fear Proxy e iNSaNiTY deixam um pequeno símbolo lado a lado.
+  </p>
+  <p style="max-width:620px; margin:25px auto; color:var(--text-muted);">
+    Guardião Junior termina a última linha. A tinta não seca: transforma-se em constelações, e cada estrela guarda uma memória. O Canvas Universal permanece aberto, não como uma ordem para repetir o passado, mas como prova de que aquela história existiu e pode continuar sendo lembrada.
+  </p>
+
+  <div style="margin-top:40px;">
+    <div class="kicker">Guardião Junior · Sétima dimensão</div>
+    <blockquote>“Tudo.... realmente aconteceu.<br>Eu amo nossa história.”</blockquote>
+    <p class="muted">— O Canvas Universal permanece aberto.</p>
+  </div>
+</section>
+
+<!-- ==================== CÂNONE ==================== -->
+<section id="canon" class="canon">
+  <h3>Observações de continuidade e cânone</h3>
+  <p style="margin-bottom:16px; color:var(--text-muted);">Esta versão estabelece uma estrutura de 12 episódios + Capítulo Especial, mas não encerra definitivamente as histórias individuais dos personagens.</p>
+  <ol>
+    <li>Ciel continua sendo Hydra!Frost!. Lordverse!Hydra! é sua transformação final, não outro personagem.</li>
+    <li>Alpha!Apogeu! continua sendo Alpha!Apogeu!. Não é Ciel, não é Hydra e não compartilha sua identidade.</li>
+    <li>Nenhum Frost principal morre. Derrotas, transformações, ferimentos, conflitos e mudanças de lado são consequências possíveis.</li>
+    <li>A Equipe Caótica permanece uma família narrativa: Kaos, Luke (Lucario), Lycanroc, Pichu e Dark Cinderace têm participação, diálogos e lutas.</li>
+    <li>Mr G. Frost e Ophanim!Frost! participam tanto das batalhas quanto dos momentos de convivência.</li>
+    <li>A Glitch Code e a Anti Code não são figurantes: seus integrantes têm funções no desenvolvimento e na resolução do conflito.</li>
+    <li>Fear Proxy e iNSaNiTY mantêm referências distintas: Tails Doll Creepypasta e Sonic.exe, respectivamente; a inspiração não substitui suas identidades.</li>
+    <li>Os Frosts secundários também importam. A história abre espaço para Longsmoi e as demais variantes, sem reduzir suas existências a números.</li>
+    <li>Steel!Frost! é introduzido no Capítulo Especial como parte da relação quadrisal consensual com True!Frost!, Ciel e Moon!Frost!.</li>
+    <li>Os relacionamentos são tratados como escolhas conscientes, com comunicação, limites e afeto, sem conteúdo sexual explícito.</li>
+  </ol>
+  <p style="margin-top:20px; color:var(--text-muted); font-size:15px;">
+    A referência de estrutura dramática foi o roteiro Nexus: cenas sequenciais, diálogos identificados, confrontos com reações e consequências e encerramentos por capítulo.<br><br>
+    Esta é a versão expandida da saga em formato de roteiro narrativo de luxo. Para uma edição verdadeiramente completa de produção, cada episódio ainda pode receber cenas intermediárias, diálogos individuais para as variantes e coreografias de combate mais longas, sem alterar os acontecimentos estabelecidos aqui.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <strong>STLNBO — LORDVERSE</strong> · EVERYTHING THAT'S LEFT · Edição Universal em HTML puro<br>
+  Uma história sobre identidade, liberdade, amizade, amor e aquilo que ainda resta.<br>
+  <span style="display:block; margin-top:10px; color:var(--gold);">Porque, depois de tudo, ainda resta a vida.</span>
+</footer>
+
+</body>
+</html>
